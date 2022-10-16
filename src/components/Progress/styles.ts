@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import { COLORS } from '../../global/theme';
+import {StyleSheet} from 'react-native';
+import {COLORS} from '../../Global/theme';
 
 export const styles = StyleSheet.create({
   container: {
@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
     borderRadius: 7,
     backgroundColor: COLORS.DARK_VIOLET,
     overflow: 'hidden',
-    marginHorizontal: 7
+    marginHorizontal: 7,
   },
   currentProgressBar: {
     height: 7,
@@ -20,17 +20,17 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.VIOLET,
     position: 'absolute',
     left: 0,
-    top: 0
+    top: 0,
   },
   percentage: {
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 15
+    marginBottom: 15,
   },
   label: {
     fontSize: 10,
-    color: COLORS.DARK_VIOLET
+    color: COLORS.DARK_VIOLET,
   },
 });

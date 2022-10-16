@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import { COLORS } from '../../global/theme';
+import {StyleSheet} from 'react-native';
+import {COLORS} from '../../Global/theme';
 
 export const styles = StyleSheet.create({
   container: {
@@ -10,12 +10,12 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 30
+    marginBottom: 30,
   },
   divider: {
     height: 45,
     width: 1,
     backgroundColor: COLORS.WHITE,
-    marginHorizontal: 40
-  }
+    marginHorizontal: 40,
+  },
 });

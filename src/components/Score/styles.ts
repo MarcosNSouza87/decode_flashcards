@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import { COLORS } from '../../global/theme';
+import {StyleSheet} from 'react-native';
+import {COLORS} from '../../Global/theme';
 
 export const styles = StyleSheet.create({
   container: {
@@ -7,11 +7,11 @@ export const styles = StyleSheet.create({
   },
   label: {
     color: COLORS.WHITE,
-    fontSize: 12
+    fontSize: 12,
   },
   value: {
     color: COLORS.WHITE,
     fontSize: 32,
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 });

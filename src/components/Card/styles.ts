@@ -1,5 +1,5 @@
-import { StyleSheet, Dimensions } from 'react-native';
-import { COLORS } from '../../global/theme';
+import {StyleSheet, Dimensions} from 'react-native';
+import {COLORS} from '../../Global/theme';
 
 export const styles = StyleSheet.create({
   container: {
@@ -10,12 +10,12 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: COLORS.WHITE,
     marginRight: 20,
-    backfaceVisibility: 'hidden'
+    backfaceVisibility: 'hidden',
   },
   label: {
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
-    padding: 12
+    padding: 12,
   },
 });

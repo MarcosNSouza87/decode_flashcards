@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native';
-import { getBottomSpace } from 'react-native-iphone-x-helper';
-import { COLORS } from '../../global/theme';
+import {StyleSheet} from 'react-native';
+import {getBottomSpace} from 'react-native-iphone-x-helper';
+import {COLORS} from '../../Global/theme';
 
 export const styles = StyleSheet.create({
   container: {
@@ -18,6 +18,6 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: getBottomSpace() + 17,
-    marginTop: 30
-  }
+    marginTop: 30,
+  },
 });

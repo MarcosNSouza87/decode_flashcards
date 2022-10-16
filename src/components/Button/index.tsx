@@ -1,15 +1,15 @@
 import React from 'react';
-import { Pressable, PressableProps, View } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
+import {Pressable, PressableProps, View} from 'react-native';
+import {MaterialIcons} from '@expo/vector-icons';
 
-import { styles } from './styles';
-import { COLORS } from '../../global/theme';
+import {styles} from './styles';
+import {COLORS} from '../../Global/theme';
 
 type Props = PressableProps & {
   size?: 'small' | 'large';
   color?: 'primary' | 'secondary';
   icon: keyof typeof MaterialIcons.glyphMap;
-}
+};
 
 export function Button({
   size = 'small',

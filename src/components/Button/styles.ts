@@ -1,12 +1,12 @@
-import { StyleSheet } from 'react-native';
-import { COLORS } from '../../global/theme';
+import {StyleSheet} from 'react-native';
+import {COLORS} from '../../Global/theme';
 
 export const styles = StyleSheet.create({
   container: {
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    marginHorizontal: 10
+    marginHorizontal: 10,
   },
   small: {
     width: 60,
@@ -17,9 +17,9 @@ export const styles = StyleSheet.create({
     height: 80,
   },
   primary: {
-    backgroundColor: COLORS.WHITE
+    backgroundColor: COLORS.WHITE,
   },
   secondary: {
-    backgroundColor: COLORS.VIOLET
-  }
+    backgroundColor: COLORS.VIOLET,
+  },
 });
