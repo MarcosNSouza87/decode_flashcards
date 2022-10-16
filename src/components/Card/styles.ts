@@ -4,7 +4,7 @@ import {COLORS} from '../../Global/theme';
 export const styles = StyleSheet.create({
   container: {
     width: Dimensions.get('screen').width - 40,
-    height: 180,
+    height: '100%',
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     backfaceVisibility: 'hidden',
   },
   label: {
-    fontSize: 18,
+    fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
     padding: 12,

@@ -13,10 +13,13 @@ type Props = {
 };
 
 export function FlipCard({data}: Props) {
+  const [isFlipped, setIsFlipped] = React.useState(false);
+  const handlePress = () => {
+    setIsFlipped(!isFlipped);
+  };
   return (
-    <Pressable onPress={() => {}}>
-      <Card label={data.front} />
-      <Card label={data.back} style={styles.back} />
+    <Pressable onPress={handlePress}>
+      {isFlipped ? <Card label={data.front} /> : <Card label={data.back} />}
     </Pressable>
   );
 }

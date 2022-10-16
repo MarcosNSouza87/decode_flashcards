@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import * as Pages from '../Pages';
+import * as Pages from '..';
 import {StatusBar} from 'react-native';
 
 export default function Routes() {

@@ -3,10 +3,12 @@ import {COLORS} from '../../Global/theme';
 
 export const styles = StyleSheet.create({
   container: {
-    borderRadius: 20,
+    borderRadius: 15,
     alignItems: 'center',
     justifyContent: 'center',
     marginHorizontal: 10,
+    paddingHorizontal: 5,
+    flexDirection: 'row',
   },
   small: {
     width: 60,
@@ -21,5 +23,10 @@ export const styles = StyleSheet.create({
   },
   secondary: {
     backgroundColor: COLORS.VIOLET,
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: COLORS.WHITE,
   },
 });

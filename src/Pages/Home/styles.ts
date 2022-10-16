@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
   footer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: getBottomSpace() + 17,
+    marginBottom: getBottomSpace() + 30,
     marginTop: 30,
   },
 });
