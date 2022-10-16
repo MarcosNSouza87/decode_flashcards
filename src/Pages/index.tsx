@@ -1,3 +1,5 @@
-import {Home} from './Home';
+import Home from './Home';
+import ReviewForm from './ReviewForm';
+import ReviewList from './ReviewList';
 
-export {Home};
+export {Home, ReviewForm, ReviewList};

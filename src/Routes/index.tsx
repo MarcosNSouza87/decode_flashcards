@@ -17,6 +17,8 @@ export default function Routes() {
         initialRouteName="Start"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Start" component={Pages.Home} />
+        <Stack.Screen name="ReviewListCard" component={Pages.ReviewList} />
+        <Stack.Screen name="ReviewFormCard" component={Pages.ReviewForm} />
       </Stack.Navigator>
     </NavigationContainer>
   );

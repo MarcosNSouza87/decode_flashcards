@@ -2,15 +2,17 @@ import React, {useRef, useState} from 'react';
 import {View, FlatList, Text, Alert} from 'react-native';
 
 import {Scoreboard} from '../../Components/Scoreboard';
-import {Highlight} from '../../Components/Highlight';
+import {Header} from '../../Components/Header';
 import {FlipCard} from '../../Components/FlipCard';
 import {Progress} from '../../Components/Progress';
 import {Button} from '../../Components/Button';
 
 import {CARDS} from '../../Utils/cards';
 import {styles} from './styles';
+import {CommonActions, useNavigation} from '@react-navigation/native';
 
-export function Home() {
+export default function Home() {
+  const navigation = useNavigation();
   const [currentCard, setCurrentCard] = useState(0);
   const cardListRef = useRef<FlatList>(null);
 
@@ -35,6 +37,10 @@ export function Home() {
     });
   }
 
+  async function handleNavigation(route: string) {
+    navigation.dispatch(CommonActions.navigate(route));
+  }
+
   async function handleCorrect() {
     setCurrentCard(0);
     handleScore();
@@ -42,7 +48,7 @@ export function Home() {
 
   return (
     <View style={styles.container}>
-      <Highlight />
+      <Header title={'Rever ajuda a fixar \n o conhecimento.'} />
       <Scoreboard reviewed={currentCard} />
 
       <FlatList
@@ -60,7 +66,7 @@ export function Home() {
       <Progress totalOfCards={totalOfCards} currentCard={currentCard} />
 
       <View style={styles.footer}>
-        <Button icon="dns" />
+        <Button icon="dns" onPress={() => handleNavigation('ReviewListCard')} />
 
         <Button
           icon="thumb-up-alt"
