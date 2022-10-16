@@ -1,14 +1,14 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Score } from '../Score';
+import {View} from 'react-native';
+import {Score} from '../Score';
 
-import { styles } from './styles';
+import {styles} from './styles';
 
 type Props = {
   reviewed: number;
-}
+};
 
-export function Scoreboard({ reviewed }: Props) {
+export function Scoreboard({reviewed}: Props) {
   return (
     <View style={styles.container}>
       <Score label="Novo" value={3} />

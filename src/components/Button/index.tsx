@@ -1,6 +1,6 @@
 import React from 'react';
 import {Pressable, PressableProps, View} from 'react-native';
-import {MaterialIcons} from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import {styles} from './styles';
 import {COLORS} from '../../Global/theme';
@@ -8,7 +8,7 @@ import {COLORS} from '../../Global/theme';
 type Props = PressableProps & {
   size?: 'small' | 'large';
   color?: 'primary' | 'secondary';
-  icon: keyof typeof MaterialIcons.glyphMap;
+  icon: string;
 };
 
 export function Button({
@@ -20,7 +20,7 @@ export function Button({
   return (
     <Pressable {...rest}>
       <View style={[styles.container, styles[size], styles[color]]}>
-        <MaterialIcons
+        <Icon
           name={icon}
           size={size === 'small' ? 32 : 44}
           color={color === 'primary' ? COLORS.VIOLET : COLORS.WHITE}

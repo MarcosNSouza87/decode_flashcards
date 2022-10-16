@@ -9,6 +9,6 @@ const COLORS = {
 
   GREEN: '#22B36D',
   RED: '#F9336E',
-}
+};
 
-export { COLORS };
+export {COLORS};

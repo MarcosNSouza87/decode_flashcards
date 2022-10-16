@@ -1,14 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import {View, Text} from 'react-native';
 
-import { styles } from './styles';
+import {styles} from './styles';
 
 type Props = {
   currentCard: number;
   totalOfCards: number;
-}
+};
 
-export function Progress({ currentCard, totalOfCards }: Props) {
+export function Progress({currentCard, totalOfCards}: Props) {
   return (
     <View style={styles.container}>
       <View style={styles.percentage}>
@@ -21,7 +21,9 @@ export function Progress({ currentCard, totalOfCards }: Props) {
         <Text style={styles.label}>100%</Text>
       </View>
 
-      <Text style={styles.label}>{currentCard} de {totalOfCards} cards</Text>
-    </View >
+      <Text style={styles.label}>
+        {currentCard} de {totalOfCards} cards
+      </Text>
+    </View>
   );
 }

@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import {View, Text} from 'react-native';
 
 import PinSvg from '../../assets/pin.svg';
 
-import { styles } from './styles';
+import {styles} from './styles';
 
 export function Highlight() {
   return (
