@@ -68,7 +68,12 @@ export default function ReviewList() {
         )}
       />
       <DS.View style={S.footer}>
-        <Button icon="add" color="secondary" size="large" onPress={handleAddNewCard} />
+        <Button
+          icon="add"
+          color="secondary"
+          size="large"
+          onPress={handleAddNewCard}
+        />
       </DS.View>
     </DS.View>
   );
