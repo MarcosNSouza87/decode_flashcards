@@ -8,8 +8,10 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: getStatusBarHeight() + 35,
-    marginBottom: 48,
+    paddingTop: getStatusBarHeight() + 35,
+    paddingBottom: 48,
+    paddingHorizontal: 24,
+    backgroundColor: COLORS.BACKGROUND,
   },
   title: {
     fontSize: 22,

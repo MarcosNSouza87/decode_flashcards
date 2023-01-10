@@ -1,6 +1,5 @@
 import React from 'react';
 import * as DS from 'react-native';
-import {Header} from '../../components/Header';
 import {styles as S} from './styles';
 import {useForm, Controller} from 'react-hook-form';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -33,7 +32,6 @@ export default function ReviewForm({navigation}: any) {
 
   return (
     <DS.View style={S.container}>
-      <Header title={'Novo \n Cartão'} isBackButton />
       <DS.Text style={S.title}>
         Expanda sua lista adicionando novas palavras para fixar.
       </DS.Text>

@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {View, Text, Alert, Pressable} from 'react-native';
 
 import {Scoreboard} from '../../components/Scoreboard';
-import {Header} from '../../components/Header';
 import {FlipCard} from '../../components/FlipCard';
 import {Progress} from '../../components/Progress';
 import {Button} from '../../components/Button';
@@ -68,10 +67,13 @@ export default function Home({navigation}: any) {
 
   return (
     <View style={styles.container}>
-      <Header title={'Rever ajuda a fixar \n o conhecimento.'} />
       <Scoreboard reviewed={currentCard} />
-      {cards.length !== 0 ? (
-        <FlipCard data={cards[currentCard]} />
+      {cards.length > 0 ? (
+        <>
+          <FlipCard data={cards[currentCard]} />
+          <Text style={styles.tip}>Toque no cartão para inverter</Text>
+          <Progress totalOfCards={totalOfCards} currentCard={currentCard} />
+        </>
       ) : (
         <View style={styles.emptyCards}>
           <Text style={styles.emptyCardsText}>Nenhum cartão cadastrado</Text>
@@ -83,20 +85,6 @@ export default function Home({navigation}: any) {
           </Pressable>
         </View>
       )}
-      {/* <FlatList
-        ref={cardListRef}
-        data={cards}
-        keyExtractor={item => item.id}
-        renderItem={({item}) => <FlipCard data={item} />}
-        horizontal
-        scrollEnabled={false}
-        showsHorizontalScrollIndicator={false}
-      /> */}
-      {cards.length > 0 && (
-        <Text style={styles.tip}>Toque no cartão para inverter</Text>
-      )}
-
-      <Progress totalOfCards={totalOfCards} currentCard={currentCard} />
 
       <View style={styles.footer}>
         <Button icon="dns" onPress={() => handleNavigation('ReviewListCard')} />

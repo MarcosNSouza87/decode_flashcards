@@ -2,7 +2,6 @@ import {CommonActions, useNavigation} from '@react-navigation/native';
 import React from 'react';
 import * as DS from 'react-native';
 import {Button} from '../../components/Button';
-import {Header} from '../../components/Header';
 import Input from '../../components/Input';
 import {CARDS} from '../../utils/cards';
 import {styles as S} from './styles';
@@ -56,7 +55,6 @@ export default function ReviewList() {
 
   return (
     <DS.View style={S.container}>
-      <Header title={'Lista de \nRevisão'} isBackButton />
       <Input
         placeholder="Pesquisar"
         value={search}
