@@ -14,7 +14,7 @@ export default function ReviewList() {
   const navigatioin = useNavigation();
   const [search, setSearch] = React.useState('');
   const [cards, setCards] = React.useState<ICard[]>([]);
-  const {upload, setUpload} = React.useContext(UploadContext);
+  const {upload, setUpload, setUpHome} = React.useContext(UploadContext);
   const getList = async () => {
     const list = await AsyncStorage.getItem('@list');
     const newList = list ? JSON.parse(list) : [];
@@ -46,6 +46,7 @@ export default function ReviewList() {
       const filteredCards = cards.filter(c => c.id !== card.id);
       await AsyncStorage.setItem('@list', JSON.stringify(filteredCards));
       setCards(filteredCards);
+      setUpHome(true);
     }
   };
 

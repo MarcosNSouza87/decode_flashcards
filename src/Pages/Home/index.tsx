@@ -14,7 +14,8 @@ import {UploadContext} from '../../context/uploadContext';
 export default function Home({navigation}: any) {
   const [currentCard, setCurrentCard] = useState(0);
   const [cards, setCards] = useState<ICard[]>([]);
-  const {upload} = React.useContext(UploadContext);
+  const {upload, setUpload, setUpHome, upHome} =
+    React.useContext(UploadContext);
 
   async function getList() {
     const list = await AsyncStorage.getItem('@list');
@@ -27,10 +28,12 @@ export default function Home({navigation}: any) {
   }, []);
 
   React.useEffect(() => {
-    if (upload) {
+    if (upload || upHome) {
       getList();
+      setUpload(false);
+      setUpHome(false);
     }
-  }, [upload]);
+  }, [upload, setUpload, upHome, setUpHome]);
 
   const totalOfCards = cards.length;
 
