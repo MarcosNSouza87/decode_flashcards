@@ -17,4 +17,8 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'right',
   },
+  logo: {
+    width: 50,
+    height: 50,
+  },
 });

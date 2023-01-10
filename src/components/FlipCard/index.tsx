@@ -45,9 +45,9 @@ export function FlipCard({data}: Props) {
     flipPosition.value = withTiming(newValue, {duration: 500});
   };
   return (
-    <Pressable onPress={handleFlipCard}>
-      <Card label={data.front} style={frontCardAnimatedStyle} />
-      <Card label={data.back} style={[styles.back, backCardAnimatedStyle]} />
+    <Pressable onPress={handleFlipCard} style={styles.card}>
+      <Card label={data?.front} style={frontCardAnimatedStyle} />
+      <Card label={data?.back} style={[styles.back, backCardAnimatedStyle]} />
     </Pressable>
   );
 }

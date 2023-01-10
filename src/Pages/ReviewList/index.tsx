@@ -6,11 +6,31 @@ import {Header} from '../../components/Header';
 import Input from '../../components/Input';
 import {CARDS} from '../../utils/cards';
 import {styles as S} from './styles';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {ICard} from '../../@types/card';
+import {UploadContext} from '../../context/uploadContext';
 
 export default function ReviewList() {
   const navigatioin = useNavigation();
   const [search, setSearch] = React.useState('');
-  const [cards, setCards] = React.useState(CARDS);
+  const [cards, setCards] = React.useState<ICard[]>([]);
+  const {upload, setUpload} = React.useContext(UploadContext);
+  const getList = async () => {
+    const list = await AsyncStorage.getItem('@list');
+    const newList = list ? JSON.parse(list) : [];
+    setCards(newList);
+  };
+
+  React.useEffect(() => {
+    getList();
+  }, []);
+
+  React.useEffect(() => {
+    if (upload) {
+      getList();
+      setUpload(false);
+    }
+  }, [upload, setUpload]);
 
   const handleSearch = (text: string) => {
     setSearch(text);
@@ -18,12 +38,13 @@ export default function ReviewList() {
     setCards(filteredCards);
   };
 
-  const handleNavigation = (card: any, type: string) => {
+  const handleNavigation = async (card: any, type: string) => {
     if (type === 'review') {
       navigatioin.dispatch(CommonActions.navigate('Review', {card}));
     }
     if (type === 'delete') {
-      const filteredCards = CARDS.filter(c => c.id !== card.id);
+      const filteredCards = cards.filter(c => c.id !== card.id);
+      await AsyncStorage.setItem('@list', JSON.stringify(filteredCards));
       setCards(filteredCards);
     }
   };

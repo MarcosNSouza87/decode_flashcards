@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
-import {styles} from './styles';
+import {styles as Styles} from './styles';
 
 type Props = {
   currentCard: number;
@@ -9,6 +9,9 @@ type Props = {
 };
 
 export function Progress({currentCard, totalOfCards}: Props) {
+  const styles = Styles({
+    currentProgress: Math.ceil((currentCard / totalOfCards) * 100),
+  });
   return (
     <View style={styles.container}>
       <View style={styles.percentage}>

@@ -9,6 +9,26 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 20,
     backgroundColor: COLORS.BACKGROUND,
   },
+  emptyCards: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 300,
+  },
+  emptyCardsText: {
+    color: COLORS.WHITE,
+    fontSize: 18,
+    textAlign: 'center',
+  },
+  button: {
+    backgroundColor: COLORS.GREEN,
+    borderRadius: 10,
+    marginTop: 20,
+    paddingHorizontal: 20,
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   tip: {
     color: COLORS.WHITE,
     fontSize: 14,

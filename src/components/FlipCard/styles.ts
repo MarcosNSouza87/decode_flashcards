@@ -2,7 +2,8 @@ import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
   card: {
-    backfaceVisibility: 'hidden',
+    marginLeft: 20,
+    height: 300,
   },
   back: {
     position: 'absolute',
