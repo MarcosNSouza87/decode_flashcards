@@ -1,4 +1,4 @@
-import {CommonActions, useNavigation} from '@react-navigation/native';
+import {CommonActions} from '@react-navigation/native';
 import React from 'react';
 import * as DS from 'react-native';
 import {Button} from '../../components/Button';
@@ -9,8 +9,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ICard} from '../../@types/card';
 import {UploadContext} from '../../context/uploadContext';
 
-export default function ReviewList() {
-  const navigatioin = useNavigation();
+export default function ReviewList({navigation}: any) {
   const [search, setSearch] = React.useState('');
   const [cards, setCards] = React.useState<ICard[]>([]);
   const {upload, setUpload, setUpHome} = React.useContext(UploadContext);
@@ -39,7 +38,7 @@ export default function ReviewList() {
 
   const handleNavigation = async (card: any, type: string) => {
     if (type === 'review') {
-      navigatioin.dispatch(CommonActions.navigate('Review', {card}));
+      navigation.dispatch(CommonActions.navigate('Review', {card}));
     }
     if (type === 'delete') {
       const filteredCards = cards.filter(c => c.id !== card.id);
@@ -50,7 +49,7 @@ export default function ReviewList() {
   };
 
   const handleAddNewCard = () => {
-    navigatioin.dispatch(CommonActions.navigate('ReviewFormCard'));
+    navigation.dispatch(CommonActions.navigate('ReviewFormCard'));
   };
 
   return (
