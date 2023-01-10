@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Routes from './Pages/Routes';
+import Routes from './routes';
 
 const App = () => <Routes />;
 

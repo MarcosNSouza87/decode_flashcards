@@ -1,6 +1,6 @@
 import React from 'react';
 import * as DS from 'react-native';
-import {Header} from '../../Components/Header';
+import {Header} from '../../components/Header';
 import {styles as S} from './styles';
 
 export default function ReviewForm() {

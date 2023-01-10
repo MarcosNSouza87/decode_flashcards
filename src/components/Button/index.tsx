@@ -3,7 +3,7 @@ import {Pressable, PressableProps, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import {styles} from './styles';
-import {COLORS} from '../../Global/theme';
+import {COLORS} from '../../utils/global/theme';
 
 type Props = PressableProps & {
   title?: string;

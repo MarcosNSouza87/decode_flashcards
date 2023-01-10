@@ -1,13 +1,13 @@
 import React, {useRef, useState} from 'react';
 import {View, FlatList, Text, Alert} from 'react-native';
 
-import {Scoreboard} from '../../Components/Scoreboard';
-import {Header} from '../../Components/Header';
-import {FlipCard} from '../../Components/FlipCard';
-import {Progress} from '../../Components/Progress';
-import {Button} from '../../Components/Button';
+import {Scoreboard} from '../../components/Scoreboard';
+import {Header} from '../../components/Header';
+import {FlipCard} from '../../components/FlipCard';
+import {Progress} from '../../components/Progress';
+import {Button} from '../../components/Button';
 
-import {CARDS} from '../../Utils/cards';
+import {CARDS} from '../../utils/cards';
 import {styles} from './styles';
 import {CommonActions, useNavigation} from '@react-navigation/native';
 
@@ -80,4 +80,3 @@ export default function Home() {
     </View>
   );
 }
-

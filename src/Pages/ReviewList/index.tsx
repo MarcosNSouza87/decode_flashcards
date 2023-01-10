@@ -1,10 +1,10 @@
 import {CommonActions, useNavigation} from '@react-navigation/native';
 import React from 'react';
 import * as DS from 'react-native';
-import {Button} from '../../Components/Button';
-import {Header} from '../../Components/Header';
-import Input from '../../Components/Input';
-import {CARDS} from '../../Utils/cards';
+import {Button} from '../../components/Button';
+import {Header} from '../../components/Header';
+import Input from '../../components/Input';
+import {CARDS} from '../../utils/cards';
 import {styles as S} from './styles';
 
 export default function ReviewList() {
